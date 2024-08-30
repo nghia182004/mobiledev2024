@@ -2,13 +2,14 @@ package vn.edu.usth.weather;
 
 import android.graphics.Color;
 import android.os.Bundle;
-
-import androidx.core.content.ContextCompat;
 import android.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import androidx.core.content.ContextCompat;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -60,7 +61,26 @@ public class ForecastFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_forecast, container, false);
-        v.setBackgroundColor(0x2000F0FF);
-        return v;
-    }}
+        // Create a new LinearLayout
+        LinearLayout linearLayout = new LinearLayout(getActivity());
+        linearLayout.setOrientation(LinearLayout.VERTICAL); // Set the orientation to vertical
+        linearLayout.setBackgroundColor(0x2000F0FF); // Set background color
+
+        // Create a TextView to display "Thursday"
+        TextView textView = new TextView(getActivity());
+        textView.setText("Thursday");
+        textView.setTextSize(20); // Set the text size
+        textView.setTextColor(Color.BLACK); // Set the text color
+
+        // Create an ImageView to display a weather icon
+        ImageView imageView = new ImageView(getActivity());
+        imageView.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.nt_chancerain)); 
+
+        // Add the TextView and ImageView to the LinearLayout
+        linearLayout.addView(textView);
+        linearLayout.addView(imageView);
+
+        // Return the LinearLayout as the fragment's view
+        return linearLayout;
+    }
+}
