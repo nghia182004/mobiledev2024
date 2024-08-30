@@ -1,6 +1,5 @@
-USTH ICT Android Development 2024
-========================================
+# USTH ICT Android Development 2024
 
-* **Your ID**
-* **Your name**
-* **Your class**
+- 22BI13332
+- Tran Trong Nghia
+- class 1
