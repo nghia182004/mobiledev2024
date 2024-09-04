@@ -5,10 +5,324 @@
     android:layout_height="match_parent"
     tools:context=".ForecastFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
+        android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="vertical"
+        >
 
+        <TextView
+            android:id="@+id/item"
+            android:layout_width="411dp"
+            android:layout_height="wrap_content"
+            android:background="#123778"
+            android:paddingTop="25dp"
+            android:paddingBottom="25dp"
+            android:text="USTH weather"
+            android:paddingLeft="10dp"
+            android:textColor="@color/white"
+            android:textSize="25dp" />
+
+        <LinearLayout
+            android:id="@+id/container1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:orientation="horizontal"
+            android:padding="15dp"
+            >
+            <LinearLayout
+                android:id="@+id/container4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:id="@+id/item1.0"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.1"
+                    android:textAlignment="center"
+                    android:background="#D2F2FB"
+                    android:paddingTop="30dp"
+                    android:text="mon" />
+                <TextView
+                    android:id="@+id/item1.1"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.1"
+                    android:textAlignment="center"
+                    android:background="#D2F2FB"
+                    android:paddingTop="30dp"
+                    android:text="tue" />
+                <TextView
+                    android:id="@+id/item1.2"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.1"
+                    android:textAlignment="center"
+                    android:background="#D2F2FB"
+                    android:paddingTop="30dp"
+                    android:text="wed" />
+                <TextView
+                    android:id="@+id/item1.3"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.1"
+                    android:textAlignment="center"
+                    android:background="#D2F2FB"
+                    android:paddingTop="30dp"
+                    android:text="thu" />
+                <TextView
+                    android:id="@+id/item1.4"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.1"
+                    android:textAlignment="center"
+                    android:background="#D2F2FB"
+                    android:paddingTop="30dp"
+                    android:text="fri" />
+                <TextView
+                    android:id="@+id/item1.5"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.1"
+                    android:textAlignment="center"
+                    android:background="#D2F2FB"
+                    android:paddingTop="30dp"
+                    android:text="sat" />
+                <TextView
+                    android:id="@+id/item1.6"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.1"
+                    android:textAlignment="center"
+                    android:background="#D2F2FB"
+                    android:paddingTop="30dp"
+                    android:text="sun" />
+                <TextView
+                    android:id="@+id/item1.7"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.1"
+                    android:textAlignment="center"
+                    android:background="#D2F2FB"
+                    android:paddingTop="30dp"
+                    android:text="mon" />
+                <TextView
+                    android:id="@+id/item1.8"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.1"
+                    android:textAlignment="center"
+                    android:background="#D2F2FB"
+                    android:paddingTop="30dp"
+                    android:text="tue" />
+                <TextView
+                    android:id="@+id/item1.9"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.1"
+                    android:textAlignment="center"
+                    android:background="#D2F2FB"
+                    android:paddingTop="30dp"
+                    android:text="wed" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/container3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:orientation="vertical"
+                >
+
+                <ImageView
+                    android:id="@+id/imageView1.0"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.1"
+                    android:adjustViewBounds="true"
+                    android:background="#D2F2FB"
+                    android:src="@drawable/sunny" />
+                <ImageView
+                    android:id="@+id/imageView1.1"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.1"
+                    android:adjustViewBounds="true"
+                    android:background="#D2F2FB"
+                    android:src="@drawable/fog" />
+                <ImageView
+                    android:id="@+id/imageView1.2"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.1"
+                    android:adjustViewBounds="true"
+                    android:background="#D2F2FB"
+                    android:src="@drawable/rain" />
+                <ImageView
+                    android:id="@+id/imageView1.3"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.1"
+                    android:adjustViewBounds="true"
+                    android:background="#D2F2FB"
+                    android:src="@drawable/tstorms" />
+                <ImageView
+                    android:id="@+id/imageView1.4"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.1"
+                    android:adjustViewBounds="true"
+                    android:background="#D2F2FB"
+                    android:src="@drawable/cloudy" />
+                <ImageView
+                    android:id="@+id/imageView1.5"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.1"
+                    android:adjustViewBounds="true"
+                    android:background="#D2F2FB"
+                    android:src="@drawable/clear" />
+                <ImageView
+                    android:id="@+id/imageView1.6"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.1"
+                    android:adjustViewBounds="true"
+                    android:background="#D2F2FB"
+                    android:src="@drawable/mostlycloudy" />
+                <ImageView
+                    android:id="@+id/imageView1.7"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.1"
+                    android:adjustViewBounds="true"
+                    android:background="#D2F2FB"
+                    android:src="@drawable/chancerain" />
+                <ImageView
+                    android:id="@+id/imageView1.8"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.1"
+                    android:adjustViewBounds="true"
+                    android:background="#D2F2FB"
+                    android:src="@drawable/partlycloudy" />
+                <ImageView
+                    android:id="@+id/imageView1.9"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.1"
+                    android:adjustViewBounds="true"
+                    android:background="#D2F2FB"
+                    android:src="@drawable/snow" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/container2"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:id="@+id/item2.0"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.1"
+                    android:background="#D2F2FB"
+                    android:paddingTop="20dp"
+                    android:paddingLeft="30dp"
+                    android:text="Sunny\n21C - 30C" />
+
+                <TextView
+                    android:id="@+id/item2.1"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.1"
+                    android:background="#D2F2FB"
+                    android:paddingTop="20dp"
+                    android:paddingLeft="30dp"
+                    android:text="Fog\n18C - 22C" />
+                <TextView
+                    android:id="@+id/item2.2"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.1"
+                    android:background="#D2F2FB"
+                    android:paddingTop="20dp"
+                    android:paddingLeft="30dp"
+                    android:text="Rainy\n16C - 18C" />
+                <TextView
+                    android:id="@+id/item2.3"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.1"
+                    android:background="#D2F2FB"
+                    android:paddingTop="20dp"
+                    android:paddingLeft="30dp"
+                    android:text="Storm\n17C - 20C" />
+                <TextView
+                    android:id="@+id/item2.4"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.1"
+                    android:background="#D2F2FB"
+                    android:paddingTop="20dp"
+                    android:paddingLeft="30dp"
+                    android:text="Cloudy\n20C - 24C" />
+                <TextView
+                    android:id="@+id/item2.5"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.1"
+                    android:background="#D2F2FB"
+                    android:paddingTop="20dp"
+                    android:paddingLeft="30dp"
+                    android:text="Sunny\n22C - 26C" />
+                <TextView
+                    android:id="@+id/item2.6"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.1"
+                    android:background="#D2F2FB"
+                    android:paddingTop="20dp"
+                    android:paddingLeft="30dp"
+                    android:text="Mostly Cloudy\n19C - 22C" />
+                <TextView
+                    android:id="@+id/item2.7"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.1"
+                    android:background="#D2F2FB"
+                    android:paddingTop="20dp"
+                    android:paddingLeft="30dp"
+                    android:text="Chance Rain\n18C - 28C" />
+                <TextView
+                    android:id="@+id/item2.8"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.1"
+                    android:background="#D2F2FB"
+                    android:paddingTop="20dp"
+                    android:paddingLeft="30dp"
+                    android:text="Partly Cloudy\n21C - 27C" />
+                <TextView
+                    android:id="@+id/item2.9"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.1"
+                    android:background="#D2F2FB"
+                    android:paddingTop="20dp"
+                    android:paddingLeft="30dp"
+                    android:text="Snow\n-1C - 5C" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
 </FrameLayout>
