@@ -12,17 +12,17 @@
         android:orientation="vertical"
         >
 
-        <TextView
-            android:id="@+id/item"
-            android:layout_width="411dp"
-            android:layout_height="wrap_content"
-            android:background="#123778"
-            android:paddingTop="25dp"
-            android:paddingBottom="25dp"
-            android:text="USTH weather"
-            android:paddingLeft="10dp"
-            android:textColor="@color/white"
-            android:textSize="25dp" />
+<!--        <TextView-->
+<!--            android:id="@+id/item"-->
+<!--            android:layout_width="411dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="#123778"-->
+<!--            android:paddingTop="25dp"-->
+<!--            android:paddingBottom="25dp"-->
+<!--            android:text="USTH weather"-->
+<!--            android:paddingLeft="10dp"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="25dp" />-->
 
         <LinearLayout
             android:id="@+id/container1"
@@ -48,6 +48,7 @@
                     android:textAlignment="center"
                     android:background="#D2F2FB"
                     android:paddingTop="30dp"
+                    android:textColor="@color/black"
                     android:text="mon" />
                 <TextView
                     android:id="@+id/item1.1"
@@ -57,6 +58,7 @@
                     android:textAlignment="center"
                     android:background="#D2F2FB"
                     android:paddingTop="30dp"
+                    android:textColor="@color/black"
                     android:text="tue" />
                 <TextView
                     android:id="@+id/item1.2"
@@ -66,6 +68,7 @@
                     android:textAlignment="center"
                     android:background="#D2F2FB"
                     android:paddingTop="30dp"
+                    android:textColor="@color/black"
                     android:text="wed" />
                 <TextView
                     android:id="@+id/item1.3"
@@ -75,6 +78,7 @@
                     android:textAlignment="center"
                     android:background="#D2F2FB"
                     android:paddingTop="30dp"
+                    android:textColor="@color/black"
                     android:text="thu" />
                 <TextView
                     android:id="@+id/item1.4"
@@ -84,6 +88,7 @@
                     android:textAlignment="center"
                     android:background="#D2F2FB"
                     android:paddingTop="30dp"
+                    android:textColor="@color/black"
                     android:text="fri" />
                 <TextView
                     android:id="@+id/item1.5"
@@ -93,6 +98,7 @@
                     android:textAlignment="center"
                     android:background="#D2F2FB"
                     android:paddingTop="30dp"
+                    android:textColor="@color/black"
                     android:text="sat" />
                 <TextView
                     android:id="@+id/item1.6"
@@ -102,6 +108,7 @@
                     android:textAlignment="center"
                     android:background="#D2F2FB"
                     android:paddingTop="30dp"
+                    android:textColor="@color/black"
                     android:text="sun" />
                 <TextView
                     android:id="@+id/item1.7"
@@ -111,6 +118,7 @@
                     android:textAlignment="center"
                     android:background="#D2F2FB"
                     android:paddingTop="30dp"
+                    android:textColor="@color/black"
                     android:text="mon" />
                 <TextView
                     android:id="@+id/item1.8"
@@ -120,6 +128,7 @@
                     android:textAlignment="center"
                     android:background="#D2F2FB"
                     android:paddingTop="30dp"
+                    android:textColor="@color/black"
                     android:text="tue" />
                 <TextView
                     android:id="@+id/item1.9"
@@ -129,6 +138,7 @@
                     android:textAlignment="center"
                     android:background="#D2F2FB"
                     android:paddingTop="30dp"
+                    android:textColor="@color/black"
                     android:text="wed" />
 
             </LinearLayout>
@@ -238,6 +248,7 @@
                     android:background="#D2F2FB"
                     android:paddingTop="20dp"
                     android:paddingLeft="30dp"
+                    android:textColor="@color/black"
                     android:text="Sunny\n21C - 30C" />
 
                 <TextView
@@ -248,6 +259,7 @@
                     android:background="#D2F2FB"
                     android:paddingTop="20dp"
                     android:paddingLeft="30dp"
+                    android:textColor="@color/black"
                     android:text="Fog\n18C - 22C" />
                 <TextView
                     android:id="@+id/item2.2"
@@ -257,6 +269,7 @@
                     android:background="#D2F2FB"
                     android:paddingTop="20dp"
                     android:paddingLeft="30dp"
+                    android:textColor="@color/black"
                     android:text="Rainy\n16C - 18C" />
                 <TextView
                     android:id="@+id/item2.3"
@@ -266,6 +279,7 @@
                     android:background="#D2F2FB"
                     android:paddingTop="20dp"
                     android:paddingLeft="30dp"
+                    android:textColor="@color/black"
                     android:text="Storm\n17C - 20C" />
                 <TextView
                     android:id="@+id/item2.4"
@@ -275,6 +289,7 @@
                     android:background="#D2F2FB"
                     android:paddingTop="20dp"
                     android:paddingLeft="30dp"
+                    android:textColor="@color/black"
                     android:text="Cloudy\n20C - 24C" />
                 <TextView
                     android:id="@+id/item2.5"
@@ -284,6 +299,7 @@
                     android:background="#D2F2FB"
                     android:paddingTop="20dp"
                     android:paddingLeft="30dp"
+                    android:textColor="@color/black"
                     android:text="Sunny\n22C - 26C" />
                 <TextView
                     android:id="@+id/item2.6"
@@ -293,6 +309,7 @@
                     android:background="#D2F2FB"
                     android:paddingTop="20dp"
                     android:paddingLeft="30dp"
+                    android:textColor="@color/black"
                     android:text="Mostly Cloudy\n19C - 22C" />
                 <TextView
                     android:id="@+id/item2.7"
@@ -302,6 +319,7 @@
                     android:background="#D2F2FB"
                     android:paddingTop="20dp"
                     android:paddingLeft="30dp"
+                    android:textColor="@color/black"
                     android:text="Chance Rain\n18C - 28C" />
                 <TextView
                     android:id="@+id/item2.8"
@@ -311,6 +329,7 @@
                     android:background="#D2F2FB"
                     android:paddingTop="20dp"
                     android:paddingLeft="30dp"
+                    android:textColor="@color/black"
                     android:text="Partly Cloudy\n21C - 27C" />
                 <TextView
                     android:id="@+id/item2.9"
@@ -320,6 +339,7 @@
                     android:background="#D2F2FB"
                     android:paddingTop="20dp"
                     android:paddingLeft="30dp"
+                    android:textColor="@color/black"
                     android:text="Snow\n-1C - 5C" />
 
             </LinearLayout>
