@@ -1,32 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WeatherActivity">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="vn.edu.usth.weather.WeatherAndForecastFragment" />
+
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="vn.edu.usth.weather.WeatherAndForecastFragment" />
+
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="vn.edu.usth.weather.WeatherAndForecastFragment" />
+
+    </androidx.viewpager.widget.ViewPager>
+</FrameLayout>
+
+
 
 
     <!-- res/layout/activity_weather.xml -->
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+<!--<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--        android:id="@+id/container"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent">-->
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <fragment
-            android:id="@+id/first"
-            android:name="vn.edu.usth.weather.WeatherFragment"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.3" />
-
-        <fragment
-            android:id="@+id/second"
-            android:name="vn.edu.usth.weather.ForecastFragment"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.7" />
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:orientation="vertical">-->
+<!--        -->
 
 
-    </LinearLayout>
-</FrameLayout>
+<!--        &lt;!&ndash;        <fragment&ndash;&gt;-->
+<!--&lt;!&ndash;            android:id="@+id/first"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:name="vn.edu.usth.weather.WeatherFragment"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="0dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_weight="0.3" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;        <fragment&ndash;&gt;-->
+<!--&lt;!&ndash;            android:id="@+id/second"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:name="vn.edu.usth.weather.ForecastFragment"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="0dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_weight="0.7" />&ndash;&gt;-->
+
+
+<!--    </LinearLayout>-->
+<!--</FrameLayout>-->
 
