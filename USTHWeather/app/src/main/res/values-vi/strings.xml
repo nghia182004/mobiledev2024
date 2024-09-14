@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">USTH Weather</string>
+    <string name="title_activity_weather">WeatherActivity</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Cloudy">12C\ncó mây</string>
+    <string name="mon">thứ 2</string>
+    <string name="tue">thứ 3</string>
+    <string name="wed">thứ 4</string>
+    <string name="thu">thứ 5</string>>
+    <string name="fri">thứ 6</string>>
+    <string name="sat">thứ 7</string>
+    <string name="sun">chủ nhật</string>
+    <string name="Sunny">nắng\n21C - 30C</string>
+    <string name="Fog">sương\n18C - 22C</string>
+    <string name="Rainy">mưa\n16C - 18C</string>
+    <string name="Storm">bão\n17C - 20C</string>
+    <string name="Clear">trời quang</string>
+    <string name="MostlyCloudy">nhiều mây\n19C - 22C</string>
+    <string name="ChanceRain">có mưa\n18C - 28C</string>
+    <string name="PartlyCloudy">trời đẹp\n21C - 27C</string>
+    <string name="Snow">tuyết\n-1C - 5C</string>
+    <string name="Cloudy2">có mây\n20C - 24C</string>
+</resources>

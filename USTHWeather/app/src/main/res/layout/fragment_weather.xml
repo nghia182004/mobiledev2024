@@ -3,8 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="15dp"
-    tools:context=".WeatherFragment">
+    tools:context=".WeatherFragment"
+    android:background="#C7F4CE">
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/frame" />
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -12,7 +16,8 @@
         android:id="@+id/container1"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:background="#C7F4CE">
+        android:layout_margin="25dp">
+
         <TextView
             android:id="@+id/container2"
             android:layout_width="wrap_content"
