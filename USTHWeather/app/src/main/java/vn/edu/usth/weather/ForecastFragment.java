@@ -1,5 +1,6 @@
 package vn.edu.usth.weather;
 
+import android.content.res.Configuration;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.app.Fragment;
@@ -10,6 +11,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.core.content.ContextCompat;
+
+import java.util.Locale;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -57,10 +60,20 @@ public class ForecastFragment extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
+    public void setLocale(String langCode) {
+        Locale locale = new Locale(langCode);
+        Locale.setDefault(locale);
+        Configuration config = new Configuration();
+        config.locale = locale;
+        getContext().getResources().updateConfiguration(config,
+                getContext().getResources().getDisplayMetrics());
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        setLocale("vn");
+
         // Create a new LinearLayout
 //        LinearLayout linearLayout = new LinearLayout(getActivity());
 //        linearLayout.setOrientation(LinearLayout.VERTICAL); // Set the orientation to vertical

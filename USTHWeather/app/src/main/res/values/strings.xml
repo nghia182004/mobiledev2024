@@ -3,4 +3,22 @@
     <string name="title_activity_weather">WeatherActivity</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Cloudy">12C\nCloudy</string>
+    <string name="mon">mon</string>
+    <string name="tue">tue</string>
+    <string name="wed">wed</string>
+    <string name="thu">thu</string>>
+    <string name="fri">fri</string>>
+    <string name="sat">sat</string>
+    <string name="sun">sun</string>
+    <string name="Sunny">sunny\n21C - 30C</string>
+    <string name="Fog">fog\n18C - 22C</string>
+    <string name="Rainy">rain\n16C - 18C</string>
+    <string name="Storm">storm\n17C - 20C</string>
+    <string name="Clear">clear</string>
+    <string name="MostlyCloudy">mostlycloudy\n19C - 22C</string>
+    <string name="ChanceRain">chancerain\n18C - 28C</string>
+    <string name="PartlyCloudy">partlycloudy\n21C - 27C</string>
+    <string name="Snow">snow\n-1C - 5C</string>
+    <string name="Cloudy2">cloudy\n20C - 24C</string>
 </resources>

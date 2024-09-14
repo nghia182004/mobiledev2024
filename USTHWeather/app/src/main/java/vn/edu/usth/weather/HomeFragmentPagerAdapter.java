@@ -29,13 +29,7 @@ public class HomeFragmentPagerAdapter extends FragmentPagerAdapter {
     }
     @Override
     public CharSequence getPageTitle(int page) {
-        switch (page) {
-            case 0:
-                return "Weather";
-            case 1:
-                return "Forecast";
-            default:
                 return titles[page];}
 // returns a tab title corresponding to the specified page
     }
-}
+
