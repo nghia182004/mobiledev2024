@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.icu.util.Output;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -27,6 +28,7 @@ import java.io.InputStream;
 public class WeatherActivity extends AppCompatActivity {
 
     private MediaPlayer mediaPlayer;
+    private Handler handler = new Handler();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,7 +73,8 @@ public class WeatherActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (id == R.id.action_refresh) {
-            Toast.makeText(this, "Refreshing weather...", Toast.LENGTH_SHORT).show();
+            simulateNetworkRequest();
+            //Toast.makeText(this, "Refreshing weather...", Toast.LENGTH_SHORT).show();
             return true;
         } else if (id == R.id.action_settings) {
             Intent intent = new Intent(this, PrefActivity.class);
@@ -80,6 +83,33 @@ public class WeatherActivity extends AppCompatActivity {
         } else {
             return super.onOptionsItemSelected(item);
         }
+
+    }
+    private void simulateNetworkRequest() {
+        // Show toast indicating refresh started
+        Toast.makeText(this, "Refreshing...", Toast.LENGTH_SHORT).show();
+
+        // Start a new thread to simulate network request
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    // Simulate delay for network request (e.g., 3 seconds)
+                    Thread.sleep(3000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+
+                // Update UI after the simulated network request
+                handler.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        // Show toast indicating refresh is complete
+                        Toast.makeText(WeatherActivity.this, "Data refreshed!", Toast.LENGTH_SHORT).show();
+                    }
+                });
+            }
+        }).start();
     }
 
 
