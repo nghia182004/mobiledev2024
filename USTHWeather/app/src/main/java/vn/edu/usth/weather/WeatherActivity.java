@@ -11,6 +11,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
+import android.os.AsyncTask;
 
 
 import androidx.annotation.NonNull;
@@ -28,7 +29,7 @@ import java.io.InputStream;
 public class WeatherActivity extends AppCompatActivity {
 
     private MediaPlayer mediaPlayer;
-    private Handler handler = new Handler();
+    
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,7 +74,7 @@ public class WeatherActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (id == R.id.action_refresh) {
-            simulateNetworkRequest();
+            new RefreshTask().execute();
             //Toast.makeText(this, "Refreshing weather...", Toast.LENGTH_SHORT).show();
             return true;
         } else if (id == R.id.action_settings) {
@@ -85,31 +86,33 @@ public class WeatherActivity extends AppCompatActivity {
         }
 
     }
-    private void simulateNetworkRequest() {
-        // Show toast indicating refresh started
-        Toast.makeText(this, "Refreshing...", Toast.LENGTH_SHORT).show();
 
-        // Start a new thread to simulate network request
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    // Simulate delay for network request (e.g., 3 seconds)
-                    Thread.sleep(3000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+    private class RefreshTask extends AsyncTask<Void, Void, Void> {
 
-                // Update UI after the simulated network request
-                handler.post(new Runnable() {
-                    @Override
-                    public void run() {
-                        // Show toast indicating refresh is complete
-                        Toast.makeText(WeatherActivity.this, "Data refreshed!", Toast.LENGTH_SHORT).show();
-                    }
-                });
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            // Show toast indicating refresh started (optional)
+            Toast.makeText(WeatherActivity.this, "Refreshing...", Toast.LENGTH_SHORT).show();
+        }
+
+        @Override
+        protected Void doInBackground(Void... voids) {
+            try {
+                // Simulate delay for network request (e.g., 3 seconds)
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
-        }).start();
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void result) {
+            super.onPostExecute(result);
+            // Show toast indicating refresh is complete
+            Toast.makeText(WeatherActivity.this, "Data refreshed!", Toast.LENGTH_SHORT).show();
+        }
     }
 
 
