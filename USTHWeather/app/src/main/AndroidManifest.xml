@@ -13,6 +13,10 @@
         android:theme="@style/Theme.USTHWeather"
         tools:targetApi="31">
         <activity
+            android:name=".PrefActivity"
+            android:label="PrefActivity"
+            android:theme="@style/Theme.AppCompat" />
+        <activity
             android:name=".WeatherActivity"
             android:exported="true"
             android:label="@string/app_name"

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,16 +7,17 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        >
+
 
         <!-- TabLayout for the header -->
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tab"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
             android:background="?attr/colorPrimary"
-            android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"/>
+            android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar" />
 
         <!-- ViewPager below TabLayout -->
         <androidx.viewpager.widget.ViewPager
@@ -24,25 +25,26 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@id/tab">
-        <fragment
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:name="vn.edu.usth.weather.WeatherAndForecastFragment" />
 
-        <fragment
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:name="vn.edu.usth.weather.WeatherAndForecastFragment" />
+            <fragment
+                android:name="vn.edu.usth.weather.WeatherAndForecastFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
 
-        <fragment
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:name="vn.edu.usth.weather.WeatherAndForecastFragment" />
+            <fragment
+                android:name="vn.edu.usth.weather.WeatherAndForecastFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <fragment
+                android:name="vn.edu.usth.weather.WeatherAndForecastFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
         </androidx.viewpager.widget.ViewPager>
 
     </RelativeLayout>
 
-</FrameLayout>
+</RelativeLayout>
 
 
 
