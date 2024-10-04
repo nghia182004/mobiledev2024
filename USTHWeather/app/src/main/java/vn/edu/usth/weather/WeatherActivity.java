@@ -1,27 +1,27 @@
-
 package vn.edu.usth.weather;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.media.MediaPlayer;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.ImageRequest;
+import com.android.volley.toolbox.Volley;
 import com.google.android.material.tabs.TabLayout;
-
-import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
 
 public class WeatherActivity extends AppCompatActivity {
 
@@ -49,7 +49,7 @@ public class WeatherActivity extends AppCompatActivity {
             });
         }
 
-        new DownloadLogoTask().execute("https://usth.edu.vn/wp-content/uploads/2021/11/logo.png");
+        downloadLogo("https://usth.edu.vn/wp-content/uploads/2021/11/logo.png");
     }
 
     @Override
@@ -65,7 +65,7 @@ public class WeatherActivity extends AppCompatActivity {
 
         if (id == R.id.action_refresh) {
             showToast("Refreshing...");
-            new DownloadLogoTask().execute("https://usth.edu.vn/wp-content/uploads/2021/11/logo.png");
+            downloadLogo("https://usth.edu.vn/wp-content/uploads/2021/11/logo.png");
             return true;
         } else if (id == R.id.action_settings) {
             Intent intent = new Intent(this, PrefActivity.class);
@@ -88,41 +88,30 @@ public class WeatherActivity extends AppCompatActivity {
                 .show();
     }
 
-    private class DownloadLogoTask extends AsyncTask<String, Void, Bitmap> {
-        @Override
-        protected Bitmap doInBackground(String... urls) {
-            Bitmap logoBitmap = null;
-            try {
-                URL url = new URL(urls[0]);
-                HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-                connection.setRequestMethod("GET");
-                connection.setDoInput(true);
-                connection.connect();
+    private void downloadLogo(String url) {
+        // Create an ImageRequest to fetch the image
+        ImageRequest imageRequest = new ImageRequest(url,
+                new Response.Listener<Bitmap>() {
+                    @Override
+                    public void onResponse(Bitmap response) {
+                        ForecastFragment.updateLogo(response); // Assuming you have a method to update the logo
+                        showToast("Logo downloaded successfully!");
+                    }
+                },
+                0, // Width
+                0, // Height
+                ImageView.ScaleType.CENTER_CROP,
+                Bitmap.Config.ARGB_8888,
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Log.e("USTHWeather", "Failed to download logo.", error);
+                        showAlertDialog("Error", "Failed to download logo. Please try again.");
+                    }
+                });
 
-                int response = connection.getResponseCode();
-                Log.i("USTHWeather", "The response is: " + response);
-                if (response == HttpURLConnection.HTTP_OK) {
-                    InputStream is = connection.getInputStream();
-                    logoBitmap = BitmapFactory.decodeStream(is);
-                }
-                connection.disconnect();
-            } catch (Exception e) {
-                Log.e("USTHWeather", "Error downloading logo", e);
-            }
-            return logoBitmap;
-        }
-
-        @Override
-        protected void onPostExecute(Bitmap logoBitmap) {
-            if (logoBitmap != null) {
-                ForecastFragment.updateLogo(logoBitmap);
-
-                showToast("Logo downloaded successfully!");
-            } else {
-                Log.e("USTHWeather", "Failed to download logo.");
-                showAlertDialog("Error", "Failed to download logo. Please try again.");
-            }
-        }
+        // Add the request to the RequestQueue
+        Volley.newRequestQueue(this).add(imageRequest);
     }
 
     @Override
@@ -155,4 +144,3 @@ public class WeatherActivity extends AppCompatActivity {
         Log.i("Weather", "onDestroy()");
     }
 }
-
