@@ -1,3 +1,4 @@
+
 package vn.edu.usth.weather;
 
 import android.os.Bundle;
@@ -10,7 +11,7 @@ import android.view.ViewGroup;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link EmptyFragment#newInstance} factory method to
+ * Use the {@link WeatherAndForecastFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
 public class EmptyFragment extends Fragment {
@@ -20,13 +21,13 @@ public class EmptyFragment extends Fragment {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
+
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
-    public EmptyFragment() {
-        // Required empty public constructor
-    }
+
+
 
     /**
      * Use this factory method to create a new instance of
@@ -34,11 +35,11 @@ public class EmptyFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment EmptyFragment.
+     * @return A new instance of fragment WeatherAndForecastFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static EmptyFragment newInstance(String param1, String param2) {
-        EmptyFragment fragment = new EmptyFragment();
+    public static WeatherAndForecastFragment newInstance(String param1, String param2) {
+        WeatherAndForecastFragment fragment = new WeatherAndForecastFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -52,6 +53,8 @@ public class EmptyFragment extends Fragment {
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
+
+
         }
     }
 
@@ -62,3 +65,4 @@ public class EmptyFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_empty, container, false);
     }
 }
+

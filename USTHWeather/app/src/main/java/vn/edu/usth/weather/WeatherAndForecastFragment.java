@@ -1,3 +1,4 @@
+
 package vn.edu.usth.weather;
 
 import android.os.Bundle;
@@ -20,13 +21,13 @@ public class WeatherAndForecastFragment extends Fragment {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
+
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
-    public WeatherAndForecastFragment() {
-        // Required empty public constructor
-    }
+
+
 
     /**
      * Use this factory method to create a new instance of
@@ -52,6 +53,8 @@ public class WeatherAndForecastFragment extends Fragment {
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
+
+
         }
     }
 
@@ -62,3 +65,4 @@ public class WeatherAndForecastFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_weather_and_forecast, container, false);
     }
 }
+

@@ -1,3 +1,4 @@
+
 package vn.edu.usth.weather;
 
 import androidx.fragment.app.Fragment;
@@ -19,17 +20,24 @@ public class HomeFragmentPagerAdapter extends FragmentPagerAdapter {
     }
     @Override
     public Fragment getItem(int page) {
-// returns an instance of Fragment corresponding to the specified page
-        switch (page) {
-            case 0: return WeatherAndForecastFragment.newInstance("", "");
-            case 1: return WeatherAndForecastFragment.newInstance("", "");
-            case 2: return WeatherAndForecastFragment.newInstance("", "");
+        // returns an instance of Fragment corresponding to the specified page
+        if (page == 0) {
+            return WeatherAndForecastFragment.newInstance("", "");
+        } else if (page == 1) {
+            return WeatherAndForecastFragment.newInstance("", "");
+        } else if (page == 2) {
+            return WeatherAndForecastFragment.newInstance("", "");
         }
         return new EmptyFragment(); // failsafe
     }
+
     @Override
     public CharSequence getPageTitle(int page) {
-                return titles[page];}
 // returns a tab title corresponding to the specified page
+        return titles[page];
     }
+}
+
+
+
 
